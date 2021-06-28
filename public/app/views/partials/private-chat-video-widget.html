@@ -1,0 +1,9 @@
+<button type="button" class="btn btn-primary btn-block"
+  ng-click="sendCallRequest()"
+  ng-if="userRole !== 'model' && !userStreaming" ng-cloak>Send video call request</button>
+<button type="button" class="btn btn-primary btn-block"
+  ng-click="acceptRequest()"
+  ng-if="userRole === 'model' && !modelStreaming && streamingInfo.hasRoom" ng-cloak>Accept video call request</button>
+
+<button class="btn btn-danger btn-block" ng-if="modelStreaming || userStreaming" ng-click="stopStreaming()" ng-cloak>Stop streaming</button>
+<div id="private-videos-container" ng-show="userStreaming || modelStreaming"></div>
