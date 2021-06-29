@@ -2,5 +2,5 @@
 
 Run command 
 
-composer install
+composer install <br>
 npm i
